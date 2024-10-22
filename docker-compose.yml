@@ -1,13 +1,11 @@
-
+version: '3'
 services:
   terraform:
+    env_file:
+      - .env   
     build:
       context: .
       dockerfile: terraform.dockerfile
-    environment:
-      - AWS_ACCESS_KEY_ID: 
-      - AWS_SECRET_ACCESS_KEY:
-      - AWS_REGION:
     volumes:
       - "./:/app"
     working_dir: /app
@@ -28,8 +26,7 @@ services:
       - --pattern
       - /app/spec/unit/*_spec.rb
   website:
-    build: 
+    build:
       context: .
     ports:
-      - 80:80
-  
+      - "80:80"
