@@ -1,4 +1,5 @@
 
 /website
-./terraform/*
+.terraform/*
+.env
 
