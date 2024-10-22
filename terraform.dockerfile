@@ -8,3 +8,4 @@ RUN rm /tmp/terraform.zip
 
 USER nobody
 
+ENTRYPOINT [ "terraform" ]
