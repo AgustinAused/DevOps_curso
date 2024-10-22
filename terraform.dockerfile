@@ -10,4 +10,4 @@ RUN apk add --no-cache wget unzip && \
 USER nobody
 
 # Definir el punto de entrada como 'terraform'
-ENTRYPOINT [ "terraform" ]
+ENTRYPOINT [ "/terraform" ]
