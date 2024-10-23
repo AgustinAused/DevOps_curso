@@ -1,5 +1,11 @@
-version: '3'
 services:
+  aws:
+    image: organs/awscli
+    env_file:
+      - .env
+    volumes:
+      - "./:/app"
+    working_dir: /app
   terraform:
     env_file:
       - .env   
